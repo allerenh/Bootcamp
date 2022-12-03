@@ -3,6 +3,8 @@ func counter(text: String) {
     let letters = text.lowercased().split(separator: " ").joined(separator: "")
     var counts: [String: Int] = [:]
     for letter in letters {
+        print(letter)
+        print(counts[String(letter)])
         counts[String(letter)] = (counts[String(letter)] ?? 0) + 1
     }
     counts.map{
