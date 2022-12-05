@@ -38,13 +38,6 @@ class TaskDetailViewController: UIViewController {
 
         
         delegate?.removeTaskDetail(position: position)
-        
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "TaskListViewController") as? TaskListViewController else {
-            return
-        }
-                
-        vc.showAlert()
-        
         removeTaskDetailButton.isEnabled = false
         dismiss(animated: true)
         
